@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./dist/index.js"></script>
+    <script>
+         function myFunction() {
+            console.log(cxz);
+        }
+    </script>
+</head>
+<body>
+    <button type="button" target-key="btn">按钮</button>
+    <button id="btn" type="button" onclick="myFunction()">错误方法上报</button>
+    <script>
+       
+        new tracker({
+            historyTracker:true,
+            requestUrl:"http://localhost:9000/tracker",
+            domTracker:true,
+            jsError:true,
+        })
+    </script>
+</body>
+</html>
